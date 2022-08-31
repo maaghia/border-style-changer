@@ -1,0 +1,41 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/yeti/bootstrap.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css';
+
+form label {
+  cursor: pointer;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: lawngreen;
+  border: 0px dotted;
+}
+
+@media (min-width: 576px) {
+  .box {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .box {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .box {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .box {
+    height: 600px;
+    width: 600px;
+  }
+}
