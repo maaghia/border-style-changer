@@ -12,7 +12,7 @@ let displayBorderRad = document.getElementById('b-rad-val')
 //BorderStyle
 selectedOption.addEventListener('click', event => {
     styleVal = selectedOption.value
-    box.style.borderStyle = `${styleVal}`
+   // box.style.borderStyle = `${styleVal}`
 })
 
 //BorderWidth
@@ -21,13 +21,14 @@ borderWidth.addEventListener('click', event => {
     box.style.borderWidth = `${widthVal}`
     displayWidth.innerHTML = `${widthVal}`
     console.log(widthVal)
-})
+}) 
 
 //BorderRadius
 allCorner.addEventListener('click' , event => {
     borderRad = allCorner.value
     box.style.borderRadius = `${borderRad}`
     displayBorderRad.innerHTML = `${borderRad}`
+    
 })
 
 //border: width + style + color
