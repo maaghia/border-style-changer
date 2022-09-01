@@ -1,4 +1,4 @@
-let box = document.querySelector(".box mb-3")
+let box = document.getElementById("box")
 let selectedOption = document.querySelector("#borderStyle")
 let borderWidth = document.querySelector("#borderWidth")
 let allCorner = document.querySelector("#borderRadius")
@@ -9,31 +9,32 @@ let borderRad = "";
 let displayWidth = document.getElementById('width-val')
 let displayBorderRad = document.getElementById('b-rad-val')
 
-//BorderStyle
-selectedOption.addEventListener('click', event => {
+//an event listener to the doc once it's loaded
+document.addEventListener("DOMContentLoaded", function(){
+    //BorderStyle
+    selectedOption.addEventListener('change', event => {
     styleVal = selectedOption.value
-   // box.style.borderStyle = `${styleVal}`
+    box.style.borderStyle = `${styleVal}`
+    box.style.borderStyle = event.styleVal
 })
 
 //BorderWidth
-borderWidth.addEventListener('click', event => {
+    borderWidth.addEventListener('input', event => {
     widthVal = borderWidth.value
-    box.style.borderWidth = `${widthVal}`
-    displayWidth.innerHTML = `${widthVal}`
-    console.log(widthVal)
+    box.style.borderWidth = `${widthVal}px`
+    displayWidth.innerHTML = `${widthVal}px`
 }) 
 
 //BorderRadius
-allCorner.addEventListener('click' , event => {
+    allCorner.addEventListener('input' , event => {
     borderRad = allCorner.value
-    box.style.borderRadius = `${borderRad}`
-    displayBorderRad.innerHTML = `${borderRad}`
+    box.style.borderRadius = `${borderRad}%`
+    displayBorderRad.innerHTML = `${borderRad}%`
     
 })
 
-//border: width + style + color
-/* const generateBorderStyle = () => {
-    borderStyle = `${widthVal}` + " " + `${styleVal}`;
-    //console.log(borderStyle)
-} */
+});
+
+
+
 
